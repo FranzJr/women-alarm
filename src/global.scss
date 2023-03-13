@@ -1,0 +1,245 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+/*
+ * App CSS
+ * ----------------------------------------------------------------------------
+ * Imports a file that can contain Sass/CSS that should be used throughout
+ * the entire app.
+ */
+
+@import "./app/app.scss";
+
+@import '~swiper/scss';
+@import '~@ionic/angular/css/ionic-swiper';
+
+// placed here instead of tutorial.scss due to slide els not getting ng scoping attribute
+.swiper-slide {
+  display: block;
+}
+
+input {
+  background: #FFFFFF !important;
+  border: 2px solid #FF9D60 !important;
+  border-radius: 10px !important;
+  height: 47px !important;
+  padding: 10px !important;
+  margin: 10px;
+}
+
+.btn-wa {
+  margin-right: 30px;
+  margin-left: 30px;
+  height: 47px !important;
+}
+
+.item-inner {
+  border-style: initial !important;
+}
+
+ion-item {
+  --ion-item-background: transparent;
+}
+
+.list-ios {
+  background: transparent;
+}
+
+.list-md {
+  background: transparent;
+}
+
+.bg-wa {
+  position: absolute;
+  bottom: 0;
+}
+
+.bg-wa-left {
+  position: absolute;
+  bottom: 0;
+  width: 45%;
+  left: 0;
+}
+
+.bg-wa-right {
+  position: absolute;
+  bottom: 0;
+  width: 45%;
+  right: 0;
+}
+
+.text-forgot {
+  margin-left: 40px;
+  margin-right: 40px;
+  text-align: right;
+  margin-bottom: 40px;
+}
+
+
+.buttons-wa {
+  text-align: center;
+  margin-top: 15px;
+
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  ion-col {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.left {
+  display: flex;
+  justify-content: left;
+}
+
+.right {
+  display: flex;
+  justify-content: right;
+}
+
+
+.btn-wa-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FEEDE3;
+  border-radius: 10px;
+  width: 75px;
+  height: 75px;
+
+  &:hover {
+    background-color: #EC5E90;
+    cursor: pointer;
+  }
+}
+
+.buttons-wa-text {
+  text-align: center;
+
+  p {
+    margin-top: 0;
+  }
+}
+
+ion-text {
+  text-align: center;
+}
+
+.menu {
+
+  padding-left: 20px;
+  padding-right: 20px;
+  border-bottom: 1px solid black;
+  margin: 20px 0;
+
+  a {
+    width: 65px;
+    height: 65px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+
+  .periodo>img {
+    width: 25px;
+  }
+
+  .planificar>img {
+    width: 28px;
+  }
+
+  .casa>img {
+    width: 35px;
+  }
+
+  .embarazo>img {
+    width: 25px;
+  }
+
+
+}
+
+.logo-wa {
+  width: 41px;
+}
+
+.color-primary {
+  color: #EC5E90;
+}
+
+ion-toolbar {
+  --background: #FEEDE3;
+}
+
+ion-header {
+  --background: #FEEDE3 !important;
+}
+
+ion-header {
+  background-color: #FEEDE3 !important;
+}
+
+
+ion-title {
+  font-size: 21px;
+}
+
+.ion-no-border {
+  height: 71px;
+
+  ion-toolbar {
+    margin-top: 8px;
+
+    img {
+      margin-top: 5px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.border-wa {
+  border: 3px solid #EC5E90;
+}
+
+.buttons-stage {
+  background-color: #FF98A9;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+
+  p{
+    margin-top: 0;
+  }
+}
