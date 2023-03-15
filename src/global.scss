@@ -54,6 +54,18 @@ input,
   height: 47px !important;
   padding: 10px !important;
   margin: 10px;
+
+
+  img {
+    margin-left: 108%;
+    margin-top: -6px;
+  }
+
+}
+
+.input{
+  margin-right: 20%;
+  margin-left: 20%;
 }
 
 .btn-wa {
@@ -270,12 +282,7 @@ ion-title {
   display: none;
 }
 
-.input {
-  img{
-    margin-left: 105%;
-    margin-top: -6px;
-  }
-}
+
 
 // WEB
 
@@ -331,7 +338,8 @@ ion-title {
   }
 
   input,
-  .input, a {
+  .input,
+  a {
     margin-left: 30%;
     margin-right: 30%;
   }
@@ -345,7 +353,7 @@ ion-title {
     margin-left: 35%;
     margin-right: 35%;
   }
-  
+
 }
 
 // WEB
