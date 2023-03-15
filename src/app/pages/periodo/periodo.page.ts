@@ -16,23 +16,11 @@ export class PeriodoPage implements OnInit {
     this.days = Array.from(Array(30).keys())
   }
 
-  embarazo(){
-    this.router.navigateByUrl('/embarazo');
-  }
-
-  planificar(){
-    this.router.navigateByUrl('/metodo');
-  }
-
-  casa(){
-    this.router.navigateByUrl('/casa');
-  }
-
-  manual(){
+  manual() {
     this.router.navigateByUrl('/alarma-manual');
   }
 
-  setListo(){
+  setListo() {
     this.listo = !this.listo;
   }
 

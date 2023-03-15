@@ -1,0 +1,38 @@
+<div class="menu">
+  <ion-row class="buttons-wa">
+    <ion-col>
+      <a class="btn-wa-tabs periodo" [ngClass]="{'active' : current === 'periodo'}"  (click)="periodo()">
+        <img src="assets/img/icons/periodo.png" alt="Periodo" />
+      </a>
+    </ion-col>
+    <ion-col>
+      <a class="btn-wa-tabs planificar" [ngClass]="{'active' : current === 'planificar'}"  (click)="planificar()">
+        <img src="assets/img/icons/planificar.png" alt="Planificar" />
+      </a>
+    </ion-col>
+    <ion-col>
+      <a class="btn-wa-tabs casa" [ngClass]="{'active' : current === 'casa'}"  (click)="casa()">
+        <img src="assets/img/icons/casa.png" alt="Casa" />
+      </a>
+    </ion-col>
+    <ion-col>
+      <a class="btn-wa-tabs embarazo" [ngClass]="{'active' : current === 'embarazo'}" (click)="embarazo()">
+        <img src="assets/img/icons/embarazo.png" alt="Embarazo" />
+      </a>
+    </ion-col>
+  </ion-row>
+  <ion-row class="buttons-wa-text">
+    <ion-col>
+      <p>Periodo</p>
+    </ion-col>
+    <ion-col>
+      <p>Planificar</p>
+    </ion-col>
+    <ion-col>
+      <p>Casa</p>
+    </ion-col>
+    <ion-col>
+      <p>Embarazo</p>
+    </ion-col>
+  </ion-row>
+</div>

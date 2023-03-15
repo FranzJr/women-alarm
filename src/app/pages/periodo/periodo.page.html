@@ -1,44 +1,8 @@
 <app-top-menu></app-top-menu>
 
 <ion-content class="center">
-  <div class="menu">
-    <ion-row class="buttons-wa">
-      <ion-col>
-        <a class="btn-wa-tabs periodo">
-          <img src="assets/img/icons/periodo.png" alt="Periodo" />
-        </a>
-      </ion-col>
-      <ion-col>
-        <a class="btn-wa-tabs planificar" (click)="planificar()">
-          <img src="assets/img/icons/planificar.png" alt="Planificar" />
-        </a>
-      </ion-col>
-      <ion-col>
-        <a class="btn-wa-tabs casa" (click)="casa()">
-          <img src="assets/img/icons/casa.png" alt="Casa" />
-        </a>
-      </ion-col>
-      <ion-col>
-        <a class="btn-wa-tabs embarazo" (click)="embarazo()">
-          <img src="assets/img/icons/embarazo.png" alt="Embarazo" />
-        </a>
-      </ion-col>
-    </ion-row>
-    <ion-row class="buttons-wa-text">
-      <ion-col>
-        <p>Periodo</p>
-      </ion-col>
-      <ion-col>
-        <p>Planificar</p>
-      </ion-col>
-      <ion-col>
-        <p>Casa</p>
-      </ion-col>
-      <ion-col>
-        <p>Embarazo</p>
-      </ion-col>
-    </ion-row>
-  </div>
+  <app-wa-menu [current]="'periodo'"></app-wa-menu>
+
 
   <ion-text>
     <h1 class="color-primary">Mi Periodo</h1>
