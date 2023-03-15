@@ -55,6 +55,10 @@ const routes: Routes = [
   {
     path: 'personaliza',
     loadChildren: () => import('./pages/personaliza/personaliza.module').then( m => m.PersonalizaPageModule)
+  },
+  {
+    path: 'olvido',
+    loadChildren: () => import('./pages/olvido/olvido.module').then( m => m.OlvidoPageModule)
   }
 
 ];
