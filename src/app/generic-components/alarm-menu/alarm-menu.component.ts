@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { IonModal } from '@ionic/angular';
+import { OverlayEventDetail } from '@ionic/core/components';
 
 @Component({
   selector: 'app-alarm-menu',
@@ -8,9 +10,29 @@ import { Router } from '@angular/router';
 })
 export class AlarmMenuComponent implements OnInit {
 
+  @ViewChild(IonModal) modal: IonModal;
+
+  message = 'Cancelado';
+
+
   constructor(public router: Router) { }
 
   ngOnInit() {}
+
+  cancel() {
+    this.modal.dismiss(null, 'cancel');
+  }
+
+  onWillDismiss(event: Event) {
+    const ev = event as CustomEvent<OverlayEventDetail<string>>;
+    if (ev.detail.role === 'confirm') {
+      this.message = `Hello, ${ev.detail.data}!`;
+    }
+  }
+
+  confirm() {
+    this.modal.dismiss("Guardado", 'confirm');
+  }
 
   manual() {
     this.router.navigateByUrl('/alarma-manual');
