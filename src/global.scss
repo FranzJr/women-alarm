@@ -38,6 +38,10 @@
 @import '~@ionic/angular/css/ionic-swiper';
 
 // placed here instead of tutorial.scss due to slide els not getting ng scoping attribute
+.center{
+  text-align: center;
+}
+
 .swiper-slide {
   display: block;
 }
