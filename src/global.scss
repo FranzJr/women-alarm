@@ -38,7 +38,7 @@
 @import '~@ionic/angular/css/ionic-swiper';
 
 // placed here instead of tutorial.scss due to slide els not getting ng scoping attribute
-.center{
+.center {
   text-align: center;
 }
 
@@ -46,7 +46,8 @@
   display: block;
 }
 
-input {
+input,
+.input {
   background: #FFFFFF !important;
   border: 2px solid #FF9D60 !important;
   border-radius: 10px !important;
@@ -206,7 +207,7 @@ ion-text {
   color: #FF9D60;
 }
 
-.pink{
+.pink {
   background-color: #EC5E90;
 }
 
@@ -269,6 +270,13 @@ ion-title {
   display: none;
 }
 
+.input {
+  img{
+    margin-left: 105%;
+    margin-top: -6px;
+  }
+}
+
 // WEB
 
 @media screen and (min-width: 1024px) {
@@ -323,15 +331,21 @@ ion-title {
   }
 
   input,
-  a {
+  .input, a {
     margin-left: 30%;
     margin-right: 30%;
+  }
+
+  .input {
+    margin-left: 35%;
+    margin-right: 35%;
   }
 
   .btn-wa {
     margin-left: 35%;
     margin-right: 35%;
   }
+  
 }
 
 // WEB

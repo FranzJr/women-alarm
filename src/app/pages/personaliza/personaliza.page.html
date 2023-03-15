@@ -14,51 +14,26 @@
   <form #signupForm="ngForm" novalidate>
     <ion-list lines="none">
       <ion-item>
-        <ion-input
-          [(ngModel)]="signup.nickname"
-          name="nickname"
-          type="text"
-          #username="ngModel"
-          placeholder="Nickname"
-          required
-        >
+        <ion-input [(ngModel)]="signup.nickname" name="nickname" type="text" #username="ngModel" placeholder="Nickname"
+          required>
         </ion-input>
       </ion-item>
       <ion-text color="danger">
-        <p
-          [hidden]="username.valid || submitted === false"
-          class="ion-padding-start"
-        >
+        <p [hidden]="username.valid || submitted === false" class="ion-padding-start">
           Se requiere nickname
         </p>
-      </ion-text>      
+      </ion-text>
     </ion-list>
 
-    <ion-text>      
+    <ion-text>
       <p>Tu fecha de nacimiento</p>
     </ion-text>
-    <ion-row *ngIf="!listo">
-      <ion-col>
-        <ion-input
-          name="date"
-          type="text"
-          spellcheck="false"
-          autocapitalize="off"
-          required
-          placeholder="dd/mm/aaaa"
-          autocomplete="off"
-        >
-        </ion-input>
-      </ion-col>
-      <ion-col>
-        <img width="50px" src="assets/img/icons/calendar.png" />
-      </ion-col>
+    <ion-row *ngIf="!listo" class="input">
+      <img width="50px" src="assets/img/icons/calendar.png" />
     </ion-row>
 
     <div class="ion-padding">
-      <ion-button (click)="goHome()" expand="block" class="btn-wa"
-        >Aceptar</ion-button
-      >
+      <ion-button (click)="goHome()" expand="block" class="btn-wa">Aceptar</ion-button>
     </div>
   </form>
 </ion-content>
