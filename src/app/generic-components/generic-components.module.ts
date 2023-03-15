@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { IonicModule } from '@ionic/angular';
 import { WaMenuComponent } from './wa-menu/wa-menu.component';
+import { AlarmMenuComponent } from './alarm-menu/alarm-menu.component';
 
 
 
 @NgModule({
   declarations: [
     TopMenuComponent,
-    WaMenuComponent
+    WaMenuComponent,
+    AlarmMenuComponent
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   imports: [
@@ -18,7 +20,8 @@ import { WaMenuComponent } from './wa-menu/wa-menu.component';
   ],
   exports: [
     TopMenuComponent,
-    WaMenuComponent
+    WaMenuComponent,
+    AlarmMenuComponent
   ]
 })
 export class GenericComponentsModule { }

@@ -14,22 +14,6 @@ export class CasaPage implements OnInit {
   ngOnInit() {
   }
 
-  embarazo(){
-    this.router.navigateByUrl('/embarazo');
-  }
-
-  planificar(){
-    this.router.navigateByUrl('/metodo');
-  }
-
-  periodo(){
-    this.router.navigateByUrl('/periodo');
-  }
-
-  manual(){
-    this.router.navigateByUrl('/alarma-manual');
-  }
-
   setListo(){
     this.listo = !this.listo;
   }

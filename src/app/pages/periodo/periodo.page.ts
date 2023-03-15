@@ -16,10 +16,6 @@ export class PeriodoPage implements OnInit {
     this.days = Array.from(Array(30).keys())
   }
 
-  manual() {
-    this.router.navigateByUrl('/alarma-manual');
-  }
-
   setListo() {
     this.listo = !this.listo;
   }

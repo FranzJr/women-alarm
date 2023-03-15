@@ -14,22 +14,6 @@ export class MetodoPage implements OnInit {
   ngOnInit() {
   }
 
-  casa(){
-    this.router.navigateByUrl('/casa');
-  }
-
-  embarazo(){
-    this.router.navigateByUrl('/embarazo');
-  }
-
-  periodo(){
-    this.router.navigateByUrl('/periodo');
-  }
-
-  manual(){
-    this.router.navigateByUrl('/alarma-manual');
-  }
-
   setListo(){
     this.listo = !this.listo;
   }
