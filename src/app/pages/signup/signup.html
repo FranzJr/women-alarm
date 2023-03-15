@@ -8,39 +8,85 @@
 </ion-header>
 
 <ion-content>
+  <img src="assets/img/bg.png" alt="bg" class="bg-wa" />
+  <img src="assets/img/left.png" alt="bg" class="bg-wa-left" />
+  <img src="assets/img/right.png" alt="bg" class="bg-wa-right" />
 
   <div class="signup-logo">
-    <img src="assets/img/appicon.svg" alt="Ionic Logo">
+    <img src="assets/img/appicon.svg" alt="Ionic Logo" />
   </div>
+
+  <ion-text>
+    <h1>Crea tu cuenta</h1>
+  </ion-text>
 
   <form #signupForm="ngForm" novalidate>
     <ion-list lines="none">
       <ion-item>
-        <ion-label position="stacked" color="primary">Username</ion-label>
-        <ion-input [(ngModel)]="signup.username" name="username" type="text" #username="ngModel" required>
+        <ion-input
+          [(ngModel)]="signup.username"
+          name="username"
+          type="text"
+          #username="ngModel"
+          placeholder="Email"
+          required
+        >
         </ion-input>
       </ion-item>
       <ion-text color="danger">
-        <p [hidden]="username.valid || submitted === false" class="ion-padding-start">
-          Username is required
+        <p
+          [hidden]="username.valid || submitted === false"
+          class="ion-padding-start"
+        >
+          Se requiere email
         </p>
       </ion-text>
 
       <ion-item>
-        <ion-label position="stacked" color="primary">Password</ion-label>
-        <ion-input [(ngModel)]="signup.password" name="password" type="password" #password="ngModel" required>
+        <ion-input
+          [(ngModel)]="signup.password"
+          name="password"
+          type="password"
+          #password="ngModel"
+          placeholder="Password"
+          required
+        >
         </ion-input>
       </ion-item>
       <ion-text color="danger">
-        <p [hidden]="password.valid || submitted === false" class="ion-padding-start">
-          Password is required
+        <p
+          [hidden]="password.valid || submitted === false"
+          class="ion-padding-start"
+        >
+          Se requiere un password
+        </p>
+      </ion-text>
+
+      <ion-item>
+        <ion-input
+          [(ngModel)]="signup.confirmPassword"
+          name="confirmPassword"
+          type="password"
+          #password="ngModel"
+          placeholder="Confirmar Password"
+          required
+        >
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger">
+        <p
+          [hidden]="password.valid || submitted === false"
+          class="ion-padding-start"
+        >
+          Se requiere un password
         </p>
       </ion-text>
     </ion-list>
 
     <div class="ion-padding">
-      <ion-button (click)="onSignup(signupForm)" type="submit" expand="block">Create</ion-button>
+      <ion-button (click)="onSignup(signupForm)" type="submit" expand="block"
+        >Registrate</ion-button
+      >
     </div>
   </form>
-
 </ion-content>

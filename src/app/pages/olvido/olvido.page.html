@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar> </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="assets/img/bg.png" alt="bg" class="bg-wa" />
+  <img src="assets/img/left.png" alt="bg" class="bg-wa-left" />
+  <img src="assets/img/right.png" alt="bg" class="bg-wa-right" />
+
+  <div class="login-logo">
+    <img src="assets/img/appicon.svg" alt="Ionic logo" />
+  </div>
+
+  <ion-row *ngIf="listo">
+    <ion-col>
+      <img src="assets/img/icons/email.png" alt="feliz" />
+    </ion-col>
+  </ion-row>
+
+  <ion-text>
+    <p *ngIf="!listo">¿Olvidaste tu contraseña?</p>
+    <p *ngIf="!listo" style="padding: 20px">
+      Ingrese el email registrado para recibir instrucciones de como restaurar
+      su contraseña
+    </p>
+    <p *ngIf="listo" style="padding: 20px">
+      Hemos enviado un email con instrucciones para recuperar tu contraseña
+    </p>
+  </ion-text>
+
+  <ion-row *ngIf="!listo">
+    <ion-col>
+      <ion-input
+        name="email"
+        type="text"
+        spellcheck="false"
+        autocapitalize="off"
+        required
+        placeholder="Email o Usuario"
+        autocomplete="off"
+      >
+      </ion-input>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button
+        *ngIf="!listo"
+        type="submit"
+        expand="block"
+        class="btn-wa"
+        (click)="setListo()"
+        >Enviar</ion-button
+      >
+      <ion-button
+        *ngIf="listo"
+        type="submit"
+        expand="block"
+        class="btn-wa"
+        (click)="login()"
+        >Ok</ion-button
+      >
+    </ion-col>
+  </ion-row>
+</ion-content>

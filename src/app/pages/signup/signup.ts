@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 
 import { UserData } from '../../providers/user-data';
 
-import { UserOptions } from '../../interfaces/user-options';
+import { UserOptionsSignup } from '../../interfaces/user-options';
 
 
 
@@ -14,7 +14,7 @@ import { UserOptions } from '../../interfaces/user-options';
   styleUrls: ['./signup.scss'],
 })
 export class SignupPage {
-  signup: UserOptions = { username: '', password: '' };
+  signup: UserOptionsSignup = { username: '', password: '', confirmPassword: '' };
   submitted = false;
 
   constructor(
@@ -27,7 +27,7 @@ export class SignupPage {
 
     if (form.valid) {
       this.userData.signup(this.signup.username);
-      this.router.navigateByUrl('/app/tabs/schedule');
+      this.router.navigateByUrl('/personaliza');
     }
   }
 }

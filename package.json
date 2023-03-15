@@ -43,6 +43,7 @@
     "cordova-browser": "6.0.0",
     "cordova-plugin-inappbrowser": "5.0.0",
     "core-js": "^3.6.4",
+    "ionic": "^5.4.16",
     "rxjs": "^6.5.4",
     "sw-toolbox": "3.6.0",
     "swiper": "8.0.7",

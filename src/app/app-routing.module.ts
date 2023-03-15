@@ -36,7 +36,31 @@ const routes: Routes = [
   {
     path: 'periodo',
     loadChildren: () => import('./pages/periodo/periodo.module').then( m => m.PeriodoPageModule)
+  },  {
+    path: 'embarazo',
+    loadChildren: () => import('./pages/embarazo/embarazo.module').then( m => m.EmbarazoPageModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'metodo',
+    loadChildren: () => import('./pages/metodo/metodo.module').then( m => m.MetodoPageModule)
+  },
+  {
+    path: 'casa',
+    loadChildren: () => import('./pages/casa/casa.module').then( m => m.CasaPageModule)
+  },
+  {
+    path: 'personaliza',
+    loadChildren: () => import('./pages/personaliza/personaliza.module').then( m => m.PersonalizaPageModule)
+  },
+  {
+    path: 'olvido',
+    loadChildren: () => import('./pages/olvido/olvido.module').then( m => m.OlvidoPageModule)
   }
+
 ];
 
 @NgModule({

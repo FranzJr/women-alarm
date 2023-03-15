@@ -12,7 +12,7 @@
   <div class="menu">
     <ion-row class="buttons-wa">
       <ion-col>
-        <a class="btn-wa-tabs periodo">
+        <a class="btn-wa-tabs periodo" (click)="periodo()">
           <img src="assets/img/icons/periodo.png" alt="Periodo" />
         </a>
       </ion-col>
@@ -27,7 +27,7 @@
         </a>
       </ion-col>
       <ion-col>
-        <a class="btn-wa-tabs embarazo" (click)="embarazo()">
+        <a class="btn-wa-tabs embarazo">
           <img src="assets/img/icons/embarazo.png" alt="Embarazo" />
         </a>
       </ion-col>
@@ -49,9 +49,30 @@
   </div>
 
   <ion-text>
-    <h1 class="color-primary">Mi Periodo</h1>
-    <p>Ingresa tu ultima fecha</p>
-    <p *ngIf="listo" class="subtitle">15/03/2023</p>
+    <h1 class="color-primary">Mi Embarazo</h1>
+    <p [ngClass]="{'subtitle': !listo}">Cuantas semanas tienes</p>
+    <p *ngIf="listo" class="subtitle">
+      Tienes 21 semanas, tu bebe mide aproximadamente 16 centímetros.
+    </p>
+  </ion-text>
+
+  <ion-row *ngIf="!listo">
+    <ion-col>
+      <ion-list>
+        <ion-item>
+          <ion-select interface="popover" placeholder="Selecione Semana">
+            <ion-select-option *ngFor="let week of weeks" [value]="week"
+              >Semana {{ week+1 }}</ion-select-option
+            >
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+
+  <ion-text>
+    <p>Cuando es tu proximo control?</p>
+    <p *ngIf="listo" class="subtitle">15/04/2023</p>
   </ion-text>
 
   <ion-row *ngIf="!listo">
@@ -73,24 +94,7 @@
   </ion-row>
 
   <ion-text>
-    <p>Cuantos dias duró</p>
-    <p *ngIf="listo" class="subtitle">4</p>
-  </ion-text>
-
-  <ion-row *ngIf="!listo">
-    <ion-col>
-      <ion-list>
-        <ion-item>
-          <ion-select interface="popover" placeholder="Selecione dias">
-            <ion-select-option *ngFor="let day of days" [value]="day">{{ day+1 }}</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
-    </ion-col>
-  </ion-row>
-
-  <ion-text>
-    <p>Tu estado de animo durante el ciclo</p>
+    <p>Tu estado de animo durante este mes</p>
   </ion-text>
 
   <ion-row *ngIf="!listo">
@@ -107,8 +111,22 @@
 
   <ion-row>
     <ion-col>
-      <ion-button *ngIf="!listo" type="submit" expand="block" class="btn-wa" (click)="setListo()">Listo</ion-button>
-      <ion-button *ngIf="listo" type="submit" expand="block" class="btn-wa" (click)="setListo()">Ingresa nuevo periodo</ion-button>
+      <ion-button
+        *ngIf="!listo"
+        type="submit"
+        expand="block"
+        class="btn-wa"
+        (click)="setListo()"
+        >Listo</ion-button
+      >
+      <ion-button
+        *ngIf="listo"
+        type="submit"
+        expand="block"
+        class="btn-wa"
+        (click)="setListo()"
+        >Ingresa tu próximo control</ion-button
+      >
     </ion-col>
   </ion-row>
 

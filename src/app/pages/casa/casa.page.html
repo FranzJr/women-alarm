@@ -1,0 +1,190 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <img class="logo-wa" src="assets/img/appicon.png" alt="Ionic Logo">
+    <ion-title>Dianna Massiris</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="menu">
+    <ion-row class="buttons-wa">
+      <ion-col>
+        <a class="btn-wa-tabs periodo" (click)="periodo()">
+          <img src="assets/img/icons/periodo.png" alt="Periodo">
+        </a>
+      </ion-col>
+      <ion-col>
+        <a class="btn-wa-tabs planificar" (click)="planificar()">
+          <img src="assets/img/icons/planificar.png" alt="Planificar">
+        </a>
+      </ion-col>
+      <ion-col>
+        <a class="btn-wa-tabs casa">
+          <img src="assets/img/icons/casa.png" alt="Casa">
+        </a>
+      </ion-col>
+      <ion-col>
+        <a class="btn-wa-tabs embarazo" (click)="embarazo()">
+          <img src="assets/img/icons/embarazo.png" alt="Embarazo">
+        </a>
+      </ion-col>
+    </ion-row>
+    <ion-row class="buttons-wa-text">
+      <ion-col>
+        <p>Periodo</p>
+      </ion-col>
+      <ion-col>
+        <p>Planificar</p>
+      </ion-col>
+      <ion-col>
+        <p>Casa</p>
+      </ion-col>
+      <ion-col>
+        <p>Embarazo</p>
+      </ion-col>
+    </ion-row>
+
+  </div>
+
+
+  <ion-text>
+    <h1 class="color-primary">
+      Mi Casa
+    </h1>
+    <p *ngIf="listo">Tus actividades</p>
+    <p *ngIf="!listo">Elije tus actividades</p>
+  </ion-text>
+
+  <div *ngIf="!listo">
+    <ion-row class="buttons-wa">
+      <ion-col>
+        <a class="btn-wa-tabs border-wa">
+          <img src="assets/img/icons/cocinar.png" alt="Cocinar">
+        </a>
+      </ion-col>
+      <ion-col>
+        <a class="btn-wa-tabs border-wa">
+          <img src="assets/img/icons/teletrabajo.png" alt="Mascotas">
+        </a>
+      </ion-col>
+      <ion-col>
+        <a class="btn-wa-tabs border-wa">
+          <img src="assets/img/icons/aseo.png" alt="Dormir">
+        </a>
+      </ion-col>
+    </ion-row>
+    <ion-row class="buttons-wa-text">
+      <ion-col>
+        <p>Cocinar</p>
+      </ion-col>
+      <ion-col>
+        <p>Teletrabajo</p>
+      </ion-col>
+      <ion-col>
+        <p>Aseo</p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="buttons-wa">
+      <ion-col>
+        <a class="btn-wa-tabs border-wa">
+          <img src="assets/img/icons/leer.png" alt="Cocinar">
+        </a>
+      </ion-col>
+      <ion-col>
+        <a class="btn-wa-tabs border-wa">
+          <img src="assets/img/icons/mascotas.png" alt="Mascotas">
+        </a>
+      </ion-col>
+      <ion-col>
+        <a class="btn-wa-tabs border-wa">
+          <img src="assets/img/icons/meditar.png" alt="Dormir">
+        </a>
+      </ion-col>
+    </ion-row>
+    <ion-row class="buttons-wa-text">
+      <ion-col>
+        <p>Leer</p>
+      </ion-col>
+      <ion-col>
+        <p>Mascotas</p>
+      </ion-col>
+      <ion-col>
+        <p>Meditar</p>
+      </ion-col>
+    </ion-row>    
+
+  </div>
+
+
+  <div *ngIf="listo">
+    <ion-row class="buttons-wa">
+      <ion-col>
+        <a class="btn-wa-tabs border-wa">
+          <img src="assets/img/icons/cocinar.png" alt="Cocinar">
+        </a>
+      </ion-col>
+      <ion-col>
+        <a class="btn-wa-tabs border-wa">
+          <img src="assets/img/icons/mascotas.png" alt="Mascotas">
+        </a>
+      </ion-col>
+      <ion-col>
+        <a class="btn-wa-tabs border-wa">
+          <img src="assets/img/icons/dormir.png" alt="Dormir">
+        </a>
+      </ion-col>
+    </ion-row>
+    <ion-row class="buttons-wa-text">
+      <ion-col>
+        <p>Cocinar</p>
+      </ion-col>
+      <ion-col>
+        <p>Mascotas</p>
+      </ion-col>
+      <ion-col>
+        <p>Dormir</p>
+      </ion-col>
+    </ion-row>
+
+  </div>
+
+
+  <ion-row>
+    <ion-col>
+      <ion-button *ngIf="!listo" type="submit" expand="block" class="btn-wa" (click)="setListo()">Listo</ion-button>
+      <ion-button *ngIf="listo" type="submit" expand="block" class="btn-wa" (click)="setListo()">Ingresa otra actividad</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <div class="buttons-stage">
+    <ion-row class="buttons-wa">
+      <ion-col>
+        <a>
+          <img src="assets/img/icons/clock.png" alt="Cocinar">
+        </a>
+      </ion-col>
+      <ion-col>
+        <a>
+          <img src="assets/img/icons/clock.png" alt="Mascotas">
+        </a>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col>
+        <p>Crea una alarma</p>
+      </ion-col>
+      <ion-col>
+        <p>Alarma automática</p>
+      </ion-col>
+    </ion-row>
+  </div>
+
+
+  <hr>
+
+</ion-content>
