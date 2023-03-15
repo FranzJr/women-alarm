@@ -1,14 +1,6 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar>
-    <img class="logo-wa" src="assets/img/appicon.png" alt="Ionic Logo" />
-    <ion-title>Dianna Massiris</ion-title>
-    <ion-buttons slot="end">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<app-top-menu></app-top-menu>
 
-<ion-content>
+<ion-content class="center">
   <div class="menu">
     <ion-row class="buttons-wa">
       <ion-col>
@@ -75,22 +67,8 @@
     <p *ngIf="listo" class="subtitle">15/04/2023</p>
   </ion-text>
 
-  <ion-row *ngIf="!listo">
-    <ion-col>
-      <ion-input
-        name="date"
-        type="text"
-        spellcheck="false"
-        autocapitalize="off"
-        required
-        placeholder="dd/mm/aaaa"
-        autocomplete="off"
-      >
-      </ion-input>
-    </ion-col>
-    <ion-col>
-      <img width="50px" src="assets/img/icons/calendar.png" />
-    </ion-col>
+  <ion-row *ngIf="!listo" class="input">
+    <img width="50px" src="assets/img/icons/calendar.png" />
   </ion-row>
 
   <ion-text>

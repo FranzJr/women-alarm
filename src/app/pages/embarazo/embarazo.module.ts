@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { EmbarazoPageRoutingModule } from './embarazo-routing.module';
 
 import { EmbarazoPage } from './embarazo.page';
+import { GenericComponentsModule } from '../../generic-components/generic-components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    EmbarazoPageRoutingModule
+    EmbarazoPageRoutingModule,
+    GenericComponentsModule
   ],
   declarations: [EmbarazoPage]
 })

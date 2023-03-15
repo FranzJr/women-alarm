@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { MetodoPageRoutingModule } from './metodo-routing.module';
 
 import { MetodoPage } from './metodo.page';
+import { GenericComponentsModule } from '../../generic-components/generic-components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MetodoPageRoutingModule
+    MetodoPageRoutingModule,
+    GenericComponentsModule
   ],
   declarations: [MetodoPage]
 })

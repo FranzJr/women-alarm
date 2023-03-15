@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { CasaPageRoutingModule } from './casa-routing.module';
 
 import { CasaPage } from './casa.page';
+import { GenericComponentsModule } from '../../generic-components/generic-components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CasaPageRoutingModule
+    CasaPageRoutingModule,
+    GenericComponentsModule
   ],
   declarations: [CasaPage]
 })

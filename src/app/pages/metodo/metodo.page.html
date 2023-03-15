@@ -1,14 +1,6 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar>
-    <img class="logo-wa" src="assets/img/appicon.png" alt="Ionic Logo" />
-    <ion-title>Dianna Massiris</ion-title>
-    <ion-buttons slot="end">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<app-top-menu></app-top-menu>
 
-<ion-content>
+<ion-content class="center">
   <div class="menu">
     <ion-row class="buttons-wa">
       <ion-col>
@@ -17,7 +9,7 @@
         </a>
       </ion-col>
       <ion-col>
-        <a class="btn-wa-tabs planificar" >
+        <a class="btn-wa-tabs planificar">
           <img src="assets/img/icons/planificar.png" alt="Planificar" />
         </a>
       </ion-col>
@@ -55,36 +47,24 @@
   </ion-text>
 
   <ion-row *ngIf="!listo">
-    <ion-col>
-      <ion-list>
-        <ion-item>
-          <ion-select interface="popover" placeholder="Selecione metodo">
-            <ion-select-option value="pastillas">Pastillas</ion-select-option>
-            <ion-select-option value="dispositivo">Dispositivo</ion-select-option>
-            <ion-select-option value="injeccion">Injeccion</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
-    </ion-col>
+    <ion-select interface="popover" placeholder="Selecione metodo">
+      <ion-select-option value="pastillas">Pastillas</ion-select-option>
+      <ion-select-option value="dispositivo">Dispositivo</ion-select-option>
+      <ion-select-option value="injeccion">Injeccion</ion-select-option>
+    </ion-select>
   </ion-row>
 
-  <ion-text>    
+  <ion-text>
     <p>Elige la periocidad</p>
     <p *ngIf="listo" class="subtitle">Diario</p>
   </ion-text>
 
   <ion-row *ngIf="!listo">
-    <ion-col>
-      <ion-list>
-        <ion-item>
-          <ion-select interface="popover" placeholder="Selecione periocidad">
-            <ion-select-option value="diario">Diario</ion-select-option>
-            <ion-select-option value="mensual">Mensual</ion-select-option>
-            <ion-select-option value="anual">Anual</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
-    </ion-col>
+    <ion-select interface="popover" placeholder="Selecione periocidad">
+      <ion-select-option value="diario">Diario</ion-select-option>
+      <ion-select-option value="mensual">Mensual</ion-select-option>
+      <ion-select-option value="anual">Anual</ion-select-option>
+    </ion-select>
   </ion-row>
 
   <ion-text>
@@ -106,7 +86,8 @@
   <ion-row>
     <ion-col>
       <ion-button *ngIf="!listo" type="submit" expand="block" class="btn-wa" (click)="setListo()">Listo</ion-button>
-      <ion-button *ngIf="listo" type="submit" expand="block" class="btn-wa" (click)="setListo()">Ingresa nuevo método</ion-button>
+      <ion-button *ngIf="listo" type="submit" expand="block" class="btn-wa" (click)="setListo()">Ingresa nuevo
+        método</ion-button>
     </ion-col>
   </ion-row>
 

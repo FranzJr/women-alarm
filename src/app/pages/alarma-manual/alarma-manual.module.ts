@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { AlarmaManualPageRoutingModule } from './alarma-manual-routing.module';
 
 import { AlarmaManualPage } from './alarma-manual.page';
+import { GenericComponentsModule } from '../../generic-components/generic-components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AlarmaManualPageRoutingModule
+    AlarmaManualPageRoutingModule,
+    GenericComponentsModule
   ],
   declarations: [AlarmaManualPage]
 })
