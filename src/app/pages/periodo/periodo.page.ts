@@ -28,6 +28,10 @@ export class PeriodoPage implements OnInit {
     this.router.navigateByUrl('/casa');
   }
 
+  manual(){
+    this.router.navigateByUrl('/alarma-manual');
+  }
+
   setListo(){
     this.listo = !this.listo;
   }

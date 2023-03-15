@@ -59,6 +59,10 @@ const routes: Routes = [
   {
     path: 'olvido',
     loadChildren: () => import('./pages/olvido/olvido.module').then( m => m.OlvidoPageModule)
+  },
+  {
+    path: 'alarma-manual',
+    loadChildren: () => import('./pages/alarma-manual/alarma-manual.module').then( m => m.AlarmaManualPageModule)
   }
 
 ];

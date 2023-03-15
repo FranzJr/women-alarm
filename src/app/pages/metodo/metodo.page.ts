@@ -26,6 +26,10 @@ export class MetodoPage implements OnInit {
     this.router.navigateByUrl('/periodo');
   }
 
+  manual(){
+    this.router.navigateByUrl('/alarma-manual');
+  }
+
   setListo(){
     this.listo = !this.listo;
   }
