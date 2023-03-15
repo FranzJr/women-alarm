@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { PeriodoPageRoutingModule } from './periodo-routing.module';
 
 import { PeriodoPage } from './periodo.page';
+import { GenericComponentsModule } from '../../generic-components/generic-components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PeriodoPageRoutingModule
+    PeriodoPageRoutingModule,
+    GenericComponentsModule
   ],
   declarations: [PeriodoPage]
 })

@@ -1,14 +1,6 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar>
-    <img class="logo-wa" src="assets/img/appicon.png" alt="Ionic Logo" />
-    <ion-title>Dianna Massiris</ion-title>
-    <ion-buttons slot="end">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
+<app-top-menu></app-top-menu>
 
-<ion-content>
+<ion-content class="center">
   <div class="menu">
     <ion-row class="buttons-wa">
       <ion-col>
@@ -54,22 +46,8 @@
     <p *ngIf="listo" class="subtitle">15/03/2023</p>
   </ion-text>
 
-  <ion-row *ngIf="!listo">
-    <ion-col>
-      <ion-input
-        name="date"
-        type="text"
-        spellcheck="false"
-        autocapitalize="off"
-        required
-        placeholder="dd/mm/aaaa"
-        autocomplete="off"
-      >
-      </ion-input>
-    </ion-col>
-    <ion-col>
-      <img width="50px" src="assets/img/icons/calendar.png" />
-    </ion-col>
+  <ion-row *ngIf="!listo" class="input">
+    <img width="50px" src="assets/img/icons/calendar.png" />
   </ion-row>
 
   <ion-text>
@@ -78,15 +56,9 @@
   </ion-text>
 
   <ion-row *ngIf="!listo">
-    <ion-col>
-      <ion-list>
-        <ion-item>
-          <ion-select interface="popover" placeholder="Selecione dias">
-            <ion-select-option *ngFor="let day of days" [value]="day">{{ day+1 }}</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
-    </ion-col>
+    <ion-select interface="popover" placeholder="Selecione dias">
+      <ion-select-option *ngFor="let day of days" [value]="day">{{ day+1 }}</ion-select-option>
+    </ion-select>
   </ion-row>
 
   <ion-text>
@@ -108,7 +80,8 @@
   <ion-row>
     <ion-col>
       <ion-button *ngIf="!listo" type="submit" expand="block" class="btn-wa" (click)="setListo()">Listo</ion-button>
-      <ion-button *ngIf="listo" type="submit" expand="block" class="btn-wa" (click)="setListo()">Ingresa nuevo periodo</ion-button>
+      <ion-button *ngIf="listo" type="submit" expand="block" class="btn-wa" (click)="setListo()">Ingresa nuevo
+        periodo</ion-button>
     </ion-col>
   </ion-row>
 
