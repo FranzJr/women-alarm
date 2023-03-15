@@ -198,7 +198,7 @@ ion-text {
   color: #EC5E90;
 }
 
-.subtitle{
+.subtitle {
   color: #FF9D60;
 }
 
@@ -243,7 +243,87 @@ ion-title {
   text-align: center;
   bottom: 0;
 
-  p{
+  p {
     margin-top: 0;
   }
 }
+
+.mt-5 {
+  margin-top: 50px !important;
+}
+
+
+.bg-wa-left-web {
+  display: none;
+}
+
+.bg-wa-right-web {
+  display: none;
+}
+
+// WEB
+
+@media screen and (min-width: 1024px) {
+  ion-router-outlet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; // Asegurar que el contenedor ocupe toda la altura de la ventana
+  }
+
+  ion-router-outlet::part(content) {
+    max-width: 80%; // Ajusta el ancho máximo del contenido según tus necesidades
+    width: 100%;
+  }
+
+
+
+  .bg-wa {
+    position: absolute;
+    bottom: 0;
+    display: none;
+  }
+
+  .bg-wa-left {
+    position: absolute;
+    bottom: 0;
+    width: 25%;
+    left: 0;
+  }
+
+  .bg-wa-right {
+    position: absolute;
+    bottom: 0;
+    width: 25%;
+    right: 0;
+  }
+
+  .bg-wa-left-web {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 45%;
+    left: 0;
+  }
+
+  .bg-wa-right-web {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 45%;
+    right: 0;
+  }
+
+  input,
+  a {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+
+  .btn-wa {
+    margin-left: 35%;
+    margin-right: 35%;
+  }
+}
+
+// WEB

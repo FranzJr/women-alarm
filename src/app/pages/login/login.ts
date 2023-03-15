@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { UserData } from '../../providers/user-data';
 
 import { UserOptions } from '../../interfaces/user-options';
+import { MenuController } from '@ionic/angular';
 
 
 
@@ -19,8 +20,13 @@ export class LoginPage {
 
   constructor(
     public userData: UserData,
-    public router: Router
+    public router: Router,
+    public menu: MenuController
   ) { }
+
+  ionViewWillEnter() {
+    this.menu.enable(false);
+  }
 
   onLogin(form: NgForm) {
     this.submitted = true;
