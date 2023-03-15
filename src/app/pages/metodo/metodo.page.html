@@ -12,12 +12,12 @@
   <div class="menu">
     <ion-row class="buttons-wa">
       <ion-col>
-        <a class="btn-wa-tabs periodo">
+        <a class="btn-wa-tabs periodo" (click)="periodo()">
           <img src="assets/img/icons/periodo.png" alt="Periodo" />
         </a>
       </ion-col>
       <ion-col>
-        <a class="btn-wa-tabs planificar" (click)="planificar()">
+        <a class="btn-wa-tabs planificar" >
           <img src="assets/img/icons/planificar.png" alt="Planificar" />
         </a>
       </ion-col>
@@ -49,40 +49,38 @@
   </div>
 
   <ion-text>
-    <h1 class="color-primary">Mi Periodo</h1>
-    <p>Ingresa tu ultima fecha</p>
-    <p *ngIf="listo" class="subtitle">15/03/2023</p>
-  </ion-text>
-
-  <ion-row *ngIf="!listo">
-    <ion-col>
-      <ion-input
-        name="date"
-        type="text"
-        spellcheck="false"
-        autocapitalize="off"
-        required
-        placeholder="dd/mm/aaaa"
-        autocomplete="off"
-      >
-      </ion-input>
-    </ion-col>
-    <ion-col>
-      <img width="50px" src="assets/img/icons/calendar.png" />
-    </ion-col>
-  </ion-row>
-
-  <ion-text>
-    <p>Cuantos dias duró</p>
-    <p *ngIf="listo" class="subtitle">4</p>
+    <h1 class="color-primary">Mi Metodo</h1>
+    <p>Elije tu metodo de planificación</p>
+    <p *ngIf="listo" class="subtitle">Pastillas de planificación</p>
   </ion-text>
 
   <ion-row *ngIf="!listo">
     <ion-col>
       <ion-list>
         <ion-item>
-          <ion-select interface="popover" placeholder="Selecione dias">
-            <ion-select-option *ngFor="let day of days" [value]="day">{{ day+1 }}</ion-select-option>
+          <ion-select interface="popover" placeholder="Selecione metodo">
+            <ion-select-option value="pastillas">Pastillas</ion-select-option>
+            <ion-select-option value="dispositivo">Dispositivo</ion-select-option>
+            <ion-select-option value="injeccion">Injeccion</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+
+  <ion-text>    
+    <p>Elige la periocidad</p>
+    <p *ngIf="listo" class="subtitle">Diario</p>
+  </ion-text>
+
+  <ion-row *ngIf="!listo">
+    <ion-col>
+      <ion-list>
+        <ion-item>
+          <ion-select interface="popover" placeholder="Selecione periocidad">
+            <ion-select-option value="diario">Diario</ion-select-option>
+            <ion-select-option value="mensual">Mensual</ion-select-option>
+            <ion-select-option value="anual">Anual</ion-select-option>
           </ion-select>
         </ion-item>
       </ion-list>
@@ -90,7 +88,7 @@
   </ion-row>
 
   <ion-text>
-    <p>Tu estado de animo durante el ciclo</p>
+    <p>Elije como te hace sentir tu método</p>
   </ion-text>
 
   <ion-row *ngIf="!listo">
@@ -108,7 +106,7 @@
   <ion-row>
     <ion-col>
       <ion-button *ngIf="!listo" type="submit" expand="block" class="btn-wa" (click)="setListo()">Listo</ion-button>
-      <ion-button *ngIf="listo" type="submit" expand="block" class="btn-wa" (click)="setListo()">Ingresa nuevo periodo</ion-button>
+      <ion-button *ngIf="listo" type="submit" expand="block" class="btn-wa" (click)="setListo()">Ingresa nuevo método</ion-button>
     </ion-col>
   </ion-row>
 
