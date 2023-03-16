@@ -3,8 +3,29 @@
     <img slot="start" class="logo-wa" src="assets/img/appicon.png" alt="Ionic Logo" />
     <ion-title>Dianna Massiris</ion-title>
     <ion-buttons slot="end">
-      <ion-menu-button></ion-menu-button>
-      <!-- <img class="logo-wa" src="assets/img/menu.png" alt="Ionic Logo" /> -->
+      <img (click)="openMenu()" class="logo-wa" src="assets/img/menu.png" alt="Ionic Logo" />
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
+<div #modalMenu class="wa-menu" *ngIf="showMenu">
+
+    <ion-list>
+      <ion-item (click)="goTo('/perfil')">
+        <a>Perfil</a>
+      </ion-item>
+
+      <ion-item (click)="goTo('/diario')">
+        <a>Diario</a>
+      </ion-item>
+
+      <ion-item (click)="goTo('/support')">
+        <a>Intereses de Alarma</a>
+      </ion-item>
+
+      <ion-item button (click)="logout()" detail="false">
+        <a>Logout</a>
+      </ion-item>
+    </ion-list>
+
+</div>

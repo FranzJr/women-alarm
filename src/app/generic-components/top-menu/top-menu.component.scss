@@ -1,0 +1,25 @@
+.wa-modal {
+    --background: #FEEDE3 !important;
+}
+
+.wa-menu{
+    position: absolute;
+    z-index: 1;
+    background: #FEEDE3;
+    border: solid 3px #EC5E90;
+    border-radius: 25px;
+    width: 100%;
+    height: 210px;
+}
+
+ion-item{ --border-color: #EC5E90; }
+
+@media screen and (min-width: 1024px) {
+
+    .wa-menu{
+        right: 0;
+        width: 300px;
+    }
+
+}
+
