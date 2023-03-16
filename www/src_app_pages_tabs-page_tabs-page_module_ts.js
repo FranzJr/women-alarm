@@ -1226,7 +1226,7 @@ class SessionDetailPage {
         });
     }
     ionViewDidEnter() {
-        this.defaultHref = `/app/tabs/schedule`;
+        this.defaultHref = `/login`;
     }
     sessionClick(item) {
         console.log('Clicked', item);
@@ -1778,7 +1778,7 @@ const routes = [
             },
             {
                 path: '',
-                redirectTo: '/app/tabs/schedule',
+                redirectTo: '/login',
                 pathMatch: 'full'
             }
         ]

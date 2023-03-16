@@ -161,7 +161,7 @@ class TutorialPage {
     }
     startApp() {
         this.router
-            .navigateByUrl('/app/tabs/schedule', { replaceUrl: true })
+            .navigateByUrl('/login', { replaceUrl: true })
             .then(() => this.storage.set('ion_did_tutorial', true));
     }
     setSwiperInstance(swiper) {
@@ -174,7 +174,7 @@ class TutorialPage {
     ionViewWillEnter() {
         this.storage.get('ion_did_tutorial').then(res => {
             if (res === true) {
-                this.router.navigateByUrl('/app/tabs/schedule', { replaceUrl: true });
+                this.router.navigateByUrl('/login', { replaceUrl: true });
             }
         });
         this.menu.enable(false);
