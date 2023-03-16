@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonModal } from '@ionic/angular';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { IonModal, ModalController } from '@ionic/angular';
 import { OverlayEventDetail } from '@ionic/core/components';
 
 @Component({
@@ -9,14 +9,21 @@ import { OverlayEventDetail } from '@ionic/core/components';
 })
 export class PerfilPage implements OnInit {
   @ViewChild(IonModal) modal: IonModal;
+  @ViewChild('modal2') modal2!: ModalController;
+  @ViewChild('modal3') modal3!: ModalController;
+  @Input() current: string = "";
 
-  constructor() { }
+  constructor(protected modalController: ModalController) { }
 
   ngOnInit() {
   }
 
+  cancel1() {
+    this.modal.dismiss(null, 'cancel');    
+  }
+  
   cancel() {
-    this.modal.dismiss(null, 'cancel');
-  }  
+    this.modalController.dismiss()
+  } 
 
 }

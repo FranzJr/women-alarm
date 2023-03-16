@@ -20,7 +20,9 @@
 
   <ion-row>
     <ion-col>
-      <ion-button id="open-editar" expand="block" class="btn-wa">Editar Información</ion-button>
+      <ion-button id="open-editar" expand="block" class="btn-wa"
+        >Editar Información</ion-button
+      >
     </ion-col>
   </ion-row>
   <ion-row>
@@ -41,73 +43,105 @@
     <a>Terminos y condiciones</a>
   </div>
 
-  <ion-modal #modal2 class="wa-modal" trigger="open-editar">
-    <ng-template>
-      <ion-content class="ion-padding center alarm-bg">
-        <div class="wa-close">
-          <ion-icon style="zoom:1.5;" (click)="cancel()" name="close"></ion-icon>
-        </div>
-        <ion-list lines="none">
-          <ion-label>Nombre</ion-label>
-          <ion-item>            
-            <ion-input name="nickname" type="text" placeholder="Nickname"></ion-input>
-          </ion-item>
-          <ion-label>Correo</ion-label>
-          <ion-item>            
-            <ion-input name="email" type="text" placeholder="Correo"></ion-input>
-          </ion-item>
-        </ion-list>
-        <div class="ion-padding">
-          <ion-button (click)="cancel()" expand="block" class="btn-wa">Listo</ion-button>
-        </div>
-      </ion-content>
-    </ng-template>
-  </ion-modal>
+  
+    <ion-modal class="wa-modal" trigger="open-editar">
+      <ng-template>
+        <ion-content class="ion-padding center alarm-bg">
+          <div class="wa-close">
+            <ion-icon
+              style="zoom: 1.5"
+              (click)="cancel1()"
+              name="close"
+            ></ion-icon>
+          </div>
+          <ion-list lines="none">
+            <ion-label>Nombre</ion-label>
+            <ion-item>
+              <ion-input
+                name="nickname"
+                type="text"
+                placeholder="Nickname"
+              ></ion-input>
+            </ion-item>
+            <ion-label>Correo</ion-label>
+            <ion-item>
+              <ion-input
+                name="email"
+                type="text"
+                placeholder="Correo"
+              ></ion-input>
+            </ion-item>
+          </ion-list>
+          <div class="ion-padding">
+            <ion-button (click)="cancel1()" expand="block" class="btn-wa"
+              >Listo</ion-button
+            >
+          </div>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
 
-  <ion-modal #modal2 class="wa-modal" trigger="open-password">
-    <ng-template>
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="end">
-            <ion-button (click)="cancel()">Cancel</ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content class="ion-padding center alarm-bg">
-        <ion-item>
-          <ion-input name="password" type="password" placeholder="Contraseña anterior"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-input name="password2" type="password" placeholder="Nueva Contraseña"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-input name="password3" type="password" placeholder="Repetir Contraseña"></ion-input>
-        </ion-item>
-        
-        <div class="ion-padding">
-          <ion-button (click)="cancel()" expand="block" class="btn-wa">Listo</ion-button>
-        </div>
-      </ion-content>
-    </ng-template>
-  </ion-modal>
+    <ion-modal #modal2 class="wa-modal" trigger="open-password">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="end">
+              <ion-button (click)="cancel()">Cancel</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding center alarm-bg">
+          <ion-item>
+            <ion-input
+              name="password"
+              type="password"
+              placeholder="Contraseña anterior"
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input
+              name="password2"
+              type="password"
+              placeholder="Nueva Contraseña"
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input
+              name="password3"
+              type="password"
+              placeholder="Repetir Contraseña"
+            ></ion-input>
+          </ion-item>
 
-  <ion-modal #modal2 class="wa-modal" trigger="open-eliminar">
-    <ng-template>
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="end">
-            <ion-button (click)="cancel()">Cancel</ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content class="ion-padding center alarm-bg">
-        <ion-item>
-          <p>¿Seguro desea eliminar su cuenta?</p>
-        </ion-item>        
-        <div class="ion-padding">
-          <ion-button (click)="cancel()" expand="block" class="btn-wa">Si</ion-button>
-        </div>
-      </ion-content>
-    </ng-template>
-  </ion-modal>
+          <div class="ion-padding">
+            <ion-button (click)="cancel()" expand="block" class="btn-wa"
+              >Listo</ion-button
+            >
+          </div>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+
+    <ion-modal #modal3 class="wa-modal" trigger="open-eliminar">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="end">
+              <ion-button (click)="cancel()">Cancel</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding center alarm-bg">
+          <ion-item>
+            <p>¿Seguro desea eliminar su cuenta?</p>
+          </ion-item>
+          <div class="ion-padding">
+            <ion-button (click)="cancel()" expand="block" class="btn-wa"
+              >Si</ion-button
+            >
+          </div>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  
 </ion-content>
