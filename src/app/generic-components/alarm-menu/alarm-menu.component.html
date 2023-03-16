@@ -319,7 +319,7 @@
     </ng-template>
   </ion-modal>
 
-  <ion-modal *ngSwitchCase="'planificar'" trigger="open-automatic-planificar" (willDismiss)="onWillDismiss($event)">
+  <ion-modal #modal2 *ngSwitchCase="'planificar'" trigger="open-automatic-planificar" (willDismiss)="onWillDismiss($event)">
     <ng-template>
       <ion-content class="ion-padding center alarm-bg">
         <ion-row>
