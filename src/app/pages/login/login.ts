@@ -25,7 +25,7 @@ export class LoginPage {
   ) { }
 
   ionViewWillEnter() {
-    this.menu.enable(false);
+    this.menu.enable(true);
   }
 
   onLogin(form: NgForm) {
