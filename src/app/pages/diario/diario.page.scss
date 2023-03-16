@@ -20,3 +20,14 @@ h1,p {
 .final{
     width: 62px;
 }
+
+@media screen and (min-width: 1024px) {
+    .calendar{
+        width: 300px;
+        margin-left: 20%;
+    }
+
+    p{
+        margin-top: 25%;
+    }
+}
