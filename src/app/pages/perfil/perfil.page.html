@@ -20,45 +20,39 @@
 
   <ion-row>
     <ion-col>
-      <ion-button id="open-editar" expand="block" class="btn-wa"
-        >Editar Información</ion-button
-      >
+      <ion-button id="open-editar" expand="block" class="btn-wa">Editar Información</ion-button>
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col>
-      <ion-button type="submit" expand="block" class="btn-wa"
-        >Cambiar Contraseña</ion-button
-      >
+      <ion-button type="submit" expand="block" class="btn-wa">Cambiar Contraseña</ion-button>
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col>
-      <ion-button type="submit" expand="block" class="btn-wa"
-        >Eliminar Cuenta</ion-button
-      >
+      <ion-button type="submit" expand="block" class="btn-wa">Eliminar Cuenta</ion-button>
     </ion-col>
   </ion-row>
   <div class="text-forgot">
     <a>Terminos y condiciones</a>
   </div>
 
-  <ion-modal trigger="open-editar">
+  <ion-modal class="wa-modal" trigger="open-editar">
     <ng-template>
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="end">
-            <ion-button (click)="cancel()">Cancel</ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>
       <ion-content class="ion-padding center alarm-bg">
-        <ion-item>
-          <ion-input name="nickname" type="text" placeholder="Nickname"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-input name="email" type="text" placeholder="Correo"></ion-input>
-        </ion-item>
+        <div class="wa-close">
+          <ion-icon style="zoom:1.5;" (click)="cancel()" name="close"></ion-icon>
+        </div>
+        <ion-list lines="none">
+          <ion-label>Nombre</ion-label>
+          <ion-item>            
+            <ion-input name="nickname" type="text" placeholder="Nickname"></ion-input>
+          </ion-item>
+          <ion-label>Correo</ion-label>
+          <ion-item>            
+            <ion-input name="email" type="text" placeholder="Correo"></ion-input>
+          </ion-item>
+        </ion-list>
         <div class="ion-padding">
           <ion-button (click)="cancel()" expand="block" class="btn-wa">Listo</ion-button>
         </div>

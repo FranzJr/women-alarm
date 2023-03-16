@@ -335,7 +335,7 @@ ion-split-pane {
 
   ion-menu {
     --background: #FEEDE3 !important;
-    
+
 
     ion-content {
       --background: #FEEDE3 !important;
@@ -359,6 +359,35 @@ ion-split-pane {
         }
       }
     }
+  }
+}
+
+.wa-close {
+  text-align: right;
+
+  ion-icon {
+    color: #EC5E90 !important;
+  }
+}
+
+.wa-modal {
+  --backdrop-opacity: 1;
+  backdrop-filter: blur(3px);
+
+  &::part(backdrop) {
+    background: #00000042;
+  }
+
+  &::part(handle) {
+    background: var(--ion-color-primary);
+    width: 150px;
+    height: 6px;
+  }
+
+  &::part(content) {
+    border: solid 3px #EC5E90;
+    border-radius: 20px; // Here the border radius
+    box-shadow: 0px 0px 20px 5px rgb(0 0 0 / 32%);
   }
 }
 
