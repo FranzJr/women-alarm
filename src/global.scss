@@ -330,6 +330,38 @@ ion-title {
   display: none;
 }
 
+ion-split-pane {
+  border: none !important;
+
+  ion-menu {
+    --background: #FEEDE3 !important;
+    
+
+    ion-content {
+      --background: #FEEDE3 !important;
+      border: solid 3px #EC5E90 !important;
+
+      ion-list-header {
+        --background: #FEEDE3 !important;
+        --color: #3D3A3B !important;
+      }
+
+      ion-item {
+        --background: #FEEDE3 !important;
+        --color: #3D3A3B !important;
+
+        ion-icon {
+          padding-right: 10px !important;
+        }
+
+        &:hover {
+          --background: #FFB4C9 !important;
+        }
+      }
+    }
+  }
+}
+
 // WEB
 
 @media screen and (min-width: 1024px) {
@@ -452,7 +484,7 @@ ion-title {
       width: 25px;
     }
 
-    a{
+    a {
       margin-left: 10px;
       margin-right: 0px;
     }
