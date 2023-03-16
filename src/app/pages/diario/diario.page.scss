@@ -1,0 +1,22 @@
+ion-content {
+    --background: #EC5E90;
+}
+
+h1,p {
+    color: white;
+}
+
+.calendar{
+    background-color: white;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding-bottom: 25px;
+}
+
+.day-of-week{
+    color: #FF6975 !important;
+}
+
+.final{
+    width: 62px;
+}

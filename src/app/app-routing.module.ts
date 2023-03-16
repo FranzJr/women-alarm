@@ -63,6 +63,10 @@ const routes: Routes = [
   {
     path: 'alarma-manual',
     loadChildren: () => import('./pages/alarma-manual/alarma-manual.module').then( m => m.AlarmaManualPageModule)
+  },
+  {
+    path: 'diario',
+    loadChildren: () => import('./pages/diario/diario.module').then( m => m.DiarioPageModule)
   }
 
 ];
