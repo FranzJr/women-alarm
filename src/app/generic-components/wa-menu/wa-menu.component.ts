@@ -15,19 +15,19 @@ export class WaMenuComponent implements OnInit {
   ngOnInit() { }
 
   periodo() {
-    this.router.navigateByUrl('/periodo');
+    this.router.navigate(['/periodo']);
   }
 
   embarazo() {
-    this.router.navigateByUrl('/embarazo');
+    this.router.navigate(['/embarazo']);
   }
 
   planificar() {
-    this.router.navigateByUrl('/metodo');
+    this.router.navigate(['/metodo']);
   }
 
   casa() {
-    this.router.navigateByUrl('/casa');
+    this.router.navigate(['/casa']);
   }
 
 

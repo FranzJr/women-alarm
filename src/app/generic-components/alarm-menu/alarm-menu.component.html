@@ -1,9 +1,31 @@
 <div class="buttons-stage">
   <ion-row class="buttons-wa">
     <ion-col>
-      <a id="open-modal" expand="block" class="btn-alarm">
-        <img src="assets/img/icons/clock.png" alt="Cocinar" />
-      </a>
+      <span [ngSwitch]="current">
+        <p *ngSwitchCase="'embarazo'">
+          <a id="open-modal-embarazo" expand="block" class="btn-alarm">
+            <img src="assets/img/icons/clock.png" alt="Cocinar" />
+          </a>
+        </p>
+        <p *ngSwitchCase="'casa'">
+          <a id="open-modal-casa" expand="block" class="btn-alarm">
+            <img src="assets/img/icons/clock.png" alt="Cocinar" />
+          </a>
+        </p>
+        <p *ngSwitchCase="'periodo'">
+          <a id="open-modal-periodo" expand="block" class="btn-alarm">
+            <img src="assets/img/icons/clock.png" alt="Cocinar" />
+          </a>
+        </p>
+        <p *ngSwitchCase="'planificar'">
+          <a id="open-modal-planificar" expand="block" class="btn-alarm">
+            <img src="assets/img/icons/clock.png" alt="Cocinar" />
+          </a>
+        </p>
+        <p *ngSwitchDefault>
+
+        </p>
+      </span>
     </ion-col>
     <ion-col>
       <a class="btn-alarm">
@@ -22,50 +44,200 @@
   </ion-row>
 </div>
 
-<ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
-  <ng-template>
-    <ion-content class="ion-padding center alarm-bg">
+<span [ngSwitch]="current">
+  <ion-modal *ngSwitchCase="'casa'" trigger="open-modal-casa" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <ion-content class="ion-padding center alarm-bg">
 
 
-      <ion-row>
+        <ion-row>
 
-        <ion-col size="2">
-          <ion-icon style="zoom:1.5;" (click)="cancel()" name="close"></ion-icon>          
-        </ion-col>
-        
-        <ion-col size="8">
-          <h2 style="margin-top: 0px;">Establecer alarma</h2>
-        </ion-col>
+          <ion-col size="2">
+            <ion-icon style="zoom:1.5;" (click)="cancel()" name="close"></ion-icon>
+          </ion-col>
 
-        <ion-col size="2">
-          
-          <ion-icon style="zoom:1.5;" (click)="confirm()"  name="checkmark"></ion-icon>
+          <ion-col size="8">
+            <h2 style="margin-top: 0px;">Establecer alarma</h2>
+          </ion-col>
 
-        </ion-col>
+          <ion-col size="2">
 
-      </ion-row>
+            <ion-icon style="zoom:1.5;" (click)="confirm()" name="checkmark"></ion-icon>
 
-      <h1>12:05</h1>
+          </ion-col>
 
-      <img src="assets/img/clock.png" alt="clock" />
+        </ion-row>
 
-      <div class="alarm-content">
-        <h3>
-          <img src="assets/img/icons/dot.png" alt="dot" />&nbsp;Repetir
-        </h3>
-        <p class="subtitle2">Una vez</p>
-        <h3>
-          <img src="assets/img/icons/dot.png" alt="dot" />&nbsp;Sonido
-        </h3>
-        <p class="subtitle2">Tono predeterminado</p>
-        <h3>
-          <img src="assets/img/icons/dot.png" alt="dot" />&nbsp;Vibrar
-        </h3>
-        <h3>
-          <img src="assets/img/icons/dot.png" alt="dot" />&nbsp;Etiqueta
-        </h3>
-        <p class="subtitle2">Lorem ipsum</p>
-      </div>
-    </ion-content>
-  </ng-template>
-</ion-modal>
+        <h1>12:05</h1>
+
+        <img src="assets/img/clock.png" alt="clock" />
+
+        <div class="alarm-content">
+          <h3>
+            <img src="assets/img/icons/dot.png" alt="dot" />&nbsp;Repetir
+          </h3>
+          <p class="subtitle2">Una vez</p>
+          <h3>
+            <img src="assets/img/icons/dot.png" alt="dot" />&nbsp;Sonido
+          </h3>
+          <p class="subtitle2">Tono predeterminado</p>
+          <h3>
+            <img src="assets/img/icons/dot.png" alt="dot" />&nbsp;Vibrar
+          </h3>
+          <h3>
+            <img src="assets/img/icons/dot.png" alt="dot" />&nbsp;Etiqueta
+          </h3>
+          <p class="subtitle2">Lorem ipsum</p>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+  
+  <ion-modal *ngSwitchCase="'embarazo'" trigger="open-modal-embarazo" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <ion-content class="ion-padding center alarm-bg">
+
+
+        <ion-row>
+
+          <ion-col size="2">
+            <ion-icon style="zoom:1.5;" (click)="cancel()" name="close"></ion-icon>
+          </ion-col>
+
+          <ion-col size="8">
+            <h2 style="margin-top: 0px;">Establecer alarma</h2>
+          </ion-col>
+
+          <ion-col size="2">
+
+            <ion-icon style="zoom:1.5;" (click)="confirm()" name="checkmark"></ion-icon>
+
+          </ion-col>
+
+        </ion-row>
+
+        <h1>12:05</h1>
+
+        <img src="assets/img/clock.png" alt="clock" />
+
+        <div class="alarm-content">
+          <h3>
+            <img src="assets/img/icons/dot.png" alt="dot" />&nbsp;Repetir
+          </h3>
+          <p class="subtitle2">Una vez</p>
+          <h3>
+            <img src="assets/img/icons/dot.png" alt="dot" />&nbsp;Sonido
+          </h3>
+          <p class="subtitle2">Tono predeterminado</p>
+          <h3>
+            <img src="assets/img/icons/dot.png" alt="dot" />&nbsp;Vibrar
+          </h3>
+          <h3>
+            <img src="assets/img/icons/dot.png" alt="dot" />&nbsp;Etiqueta
+          </h3>
+          <p class="subtitle2">Lorem ipsum</p>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal *ngSwitchCase="'periodo'" trigger="open-modal-periodo" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <ion-content class="ion-padding center alarm-bg">
+
+
+        <ion-row>
+
+          <ion-col size="2">
+            <ion-icon style="zoom:1.5;" (click)="cancel()" name="close"></ion-icon>
+          </ion-col>
+
+          <ion-col size="8">
+            <h2 style="margin-top: 0px;">Establecer alarma</h2>
+          </ion-col>
+
+          <ion-col size="2">
+
+            <ion-icon style="zoom:1.5;" (click)="confirm()" name="checkmark"></ion-icon>
+
+          </ion-col>
+
+        </ion-row>
+
+        <h1>12:05</h1>
+
+        <img src="assets/img/clock.png" alt="clock" />
+
+        <div class="alarm-content">
+          <h3>
+            <img src="assets/img/icons/dot.png" alt="dot" />&nbsp;Repetir
+          </h3>
+          <p class="subtitle2">Una vez</p>
+          <h3>
+            <img src="assets/img/icons/dot.png" alt="dot" />&nbsp;Sonido
+          </h3>
+          <p class="subtitle2">Tono predeterminado</p>
+          <h3>
+            <img src="assets/img/icons/dot.png" alt="dot" />&nbsp;Vibrar
+          </h3>
+          <h3>
+            <img src="assets/img/icons/dot.png" alt="dot" />&nbsp;Etiqueta
+          </h3>
+          <p class="subtitle2">Lorem ipsum</p>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal *ngSwitchCase="'planificar'" trigger="open-modal-planificar" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <ion-content class="ion-padding center alarm-bg">
+
+
+        <ion-row>
+
+          <ion-col size="2">
+            <ion-icon style="zoom:1.5;" (click)="cancel()" name="close"></ion-icon>
+          </ion-col>
+
+          <ion-col size="8">
+            <h2 style="margin-top: 0px;">Establecer alarma</h2>
+          </ion-col>
+
+          <ion-col size="2">
+
+            <ion-icon style="zoom:1.5;" (click)="confirm()" name="checkmark"></ion-icon>
+
+          </ion-col>
+
+        </ion-row>
+
+        <h1>12:05</h1>
+
+        <img src="assets/img/clock.png" alt="clock" />
+
+        <div class="alarm-content">
+          <h3>
+            <img src="assets/img/icons/dot.png" alt="dot" />&nbsp;Repetir
+          </h3>
+          <p class="subtitle2">Una vez</p>
+          <h3>
+            <img src="assets/img/icons/dot.png" alt="dot" />&nbsp;Sonido
+          </h3>
+          <p class="subtitle2">Tono predeterminado</p>
+          <h3>
+            <img src="assets/img/icons/dot.png" alt="dot" />&nbsp;Vibrar
+          </h3>
+          <h3>
+            <img src="assets/img/icons/dot.png" alt="dot" />&nbsp;Etiqueta
+          </h3>
+          <p class="subtitle2">Lorem ipsum</p>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <p *ngSwitchDefault>
+
+  </p>
+</span>

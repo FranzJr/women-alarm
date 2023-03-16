@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { IonModal } from '@ionic/angular';
 import { OverlayEventDetail } from '@ionic/core/components';
@@ -11,6 +11,7 @@ import { OverlayEventDetail } from '@ionic/core/components';
 export class AlarmMenuComponent implements OnInit {
 
   @ViewChild(IonModal) modal: IonModal;
+  @Input() current: string = "";
 
   message = 'Cancelado';
 
