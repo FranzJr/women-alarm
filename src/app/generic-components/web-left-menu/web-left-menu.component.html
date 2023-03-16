@@ -1,0 +1,18 @@
+<div class="menu-web">
+  <a class="btn-wa-tabs periodo" [ngClass]="{'active' : current === 'periodo'}" (click)="periodo()">
+    <img src="assets/img/icons/periodo.png" alt="Periodo" />
+  </a>
+  <p>Periodo</p>
+  <a class="btn-wa-tabs planificar" [ngClass]="{'active' : current === 'planificar'}" (click)="planificar()">
+    <img src="assets/img/icons/planificar.png" alt="Planificar" />
+  </a>
+  <p>Planificar</p>
+  <a class="btn-wa-tabs casa" [ngClass]="{'active' : current === 'casa'}" (click)="casa()">
+    <img src="assets/img/icons/casa.png" alt="Casa" />
+  </a>
+  <p>Casa</p>
+  <a class="btn-wa-tabs embarazo" [ngClass]="{'active' : current === 'embarazo'}" (click)="embarazo()">
+    <img src="assets/img/icons/embarazo.png" alt="Embarazo" />
+  </a>
+  <p>Embarazo</p>
+</div>

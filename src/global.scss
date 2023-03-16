@@ -322,6 +322,14 @@ ion-title {
   color: white;
 }
 
+.menu {
+  display: block;
+}
+
+.menu-web {
+  display: none;
+}
+
 // WEB
 
 @media screen and (min-width: 1024px) {
@@ -342,7 +350,7 @@ ion-title {
     width: 200px;
     margin-left: 30%;
     text-align: left;
-  
+
   }
 
 
@@ -402,6 +410,53 @@ ion-title {
   .web-grid {
     margin-left: 30%;
     margin-right: 30%;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu-web {
+    text-align: center;
+    display: block;
+    position: fixed;
+    top: 100px;
+    margin-left: 10px;
+    padding: 10px;
+    background-color: #FEC89A;
+    border-radius: 10px;
+
+    p {
+      padding-left: 0px;
+    }
+
+    .btn-wa-tabs {
+      text-align: center;
+      width: 55px;
+      height: 55px;
+    }
+
+    .periodo>img {
+      width: 25px;
+    }
+
+    .planificar>img {
+      width: 28px;
+    }
+
+    .casa>img {
+      width: 35px;
+    }
+
+    .embarazo>img {
+      width: 25px;
+    }
+
+    a{
+      margin-left: 10px;
+      margin-right: 0px;
+    }
+
   }
 
 }
