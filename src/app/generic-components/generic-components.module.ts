@@ -4,6 +4,7 @@ import { TopMenuComponent } from './top-menu/top-menu.component';
 import { IonicModule } from '@ionic/angular';
 import { WaMenuComponent } from './wa-menu/wa-menu.component';
 import { AlarmMenuComponent } from './alarm-menu/alarm-menu.component';
+import { AutomaticAlarmsComponent } from './automatic-alarms/automatic-alarms.component';
 
 
 
@@ -11,7 +12,8 @@ import { AlarmMenuComponent } from './alarm-menu/alarm-menu.component';
   declarations: [
     TopMenuComponent,
     WaMenuComponent,
-    AlarmMenuComponent
+    AlarmMenuComponent,
+    AutomaticAlarmsComponent
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   imports: [
@@ -21,7 +23,8 @@ import { AlarmMenuComponent } from './alarm-menu/alarm-menu.component';
   exports: [
     TopMenuComponent,
     WaMenuComponent,
-    AlarmMenuComponent
+    AlarmMenuComponent,
+    AutomaticAlarmsComponent
   ]
 })
 export class GenericComponentsModule { }

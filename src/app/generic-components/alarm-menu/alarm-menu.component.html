@@ -28,9 +28,31 @@
       </span>
     </ion-col>
     <ion-col>
-      <a class="btn-alarm">
-        <img src="assets/img/icons/clock.png" alt="Mascotas" />
-      </a>
+      <span [ngSwitch]="current">
+        <p *ngSwitchCase="'embarazo'">
+          <a id="open-automatic-embarazo" expand="block" class="btn-alarm">
+            <img src="assets/img/icons/clock.png" alt="Cocinar" />
+          </a>
+        </p>
+        <p *ngSwitchCase="'casa'">
+          <a id="open-automatic-casa" expand="block" class="btn-alarm">
+            <img src="assets/img/icons/clock.png" alt="Cocinar" />
+          </a>
+        </p>
+        <p *ngSwitchCase="'periodo'">
+          <a id="open-automatic-periodo" expand="block" class="btn-alarm">
+            <img src="assets/img/icons/clock.png" alt="Cocinar" />
+          </a>
+        </p>
+        <p *ngSwitchCase="'planificar'">
+          <a id="open-automatic-planificar" expand="block" class="btn-alarm">
+            <img src="assets/img/icons/clock.png" alt="Cocinar" />
+          </a>
+        </p>
+        <p *ngSwitchDefault>
+
+        </p>
+      </span>
     </ion-col>
   </ion-row>
 
@@ -92,7 +114,7 @@
       </ion-content>
     </ng-template>
   </ion-modal>
-  
+
   <ion-modal *ngSwitchCase="'embarazo'" trigger="open-modal-embarazo" (willDismiss)="onWillDismiss($event)">
     <ng-template>
       <ion-content class="ion-padding center alarm-bg">
@@ -233,6 +255,83 @@
           </h3>
           <p class="subtitle2">Lorem ipsum</p>
         </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <p *ngSwitchDefault>
+
+  </p>
+</span>
+
+
+<span [ngSwitch]="current">
+  <ion-modal #modal2 *ngSwitchCase="'casa'" trigger="open-automatic-casa" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <ion-content class="ion-padding center alarm-bg">
+        <ion-row>
+          <ion-col size="2">
+            <ion-icon style="zoom:1.5;" (click)="close()" name="close"></ion-icon>
+          </ion-col>
+          <ion-col size="10">
+            <h2 style="margin-top: 0px;">Mis alarmas automáticas</h2>
+          </ion-col>
+        </ion-row>
+
+        <app-automatic-alarms></app-automatic-alarms>
+
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal #modal2 *ngSwitchCase="'embarazo'" trigger="open-automatic-embarazo" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <ion-content class="ion-padding center alarm-bg">
+        <ion-row>
+          <ion-col size="2">
+            <ion-icon style="zoom:1.5;" (click)="close()" name="close"></ion-icon>
+          </ion-col>
+          <ion-col size="10">
+            <h2 style="margin-top: 0px;">Mis alarmas automáticas</h2>
+          </ion-col>
+        </ion-row>
+
+        <app-automatic-alarms></app-automatic-alarms>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal  #modal2 *ngSwitchCase="'periodo'" trigger="open-automatic-periodo" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <ion-content class="ion-padding center alarm-bg">
+        <ion-row>
+          <ion-col size="2">
+            <ion-icon style="zoom:1.5;" (click)="close()" name="close"></ion-icon>
+          </ion-col>
+          <ion-col size="10">
+            <h2 style="margin-top: 0px;">Mis alarmas automáticas</h2>
+          </ion-col>
+        </ion-row>
+
+        <app-automatic-alarms></app-automatic-alarms>
+
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal *ngSwitchCase="'planificar'" trigger="open-automatic-planificar" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <ion-content class="ion-padding center alarm-bg">
+        <ion-row>
+          <ion-col size="2">
+            <ion-icon style="zoom:1.5;" (click)="close()" name="close"></ion-icon>
+          </ion-col>
+          <ion-col size="10">
+            <h2 style="margin-top: 0px;">Mis alarmas automáticas</h2>
+          </ion-col>
+        </ion-row>
+
+        <app-automatic-alarms></app-automatic-alarms>
       </ion-content>
     </ng-template>
   </ion-modal>

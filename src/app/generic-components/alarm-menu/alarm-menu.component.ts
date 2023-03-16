@@ -1,6 +1,6 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { IonModal } from '@ionic/angular';
+import { IonModal, ModalController } from '@ionic/angular';
 import { OverlayEventDetail } from '@ionic/core/components';
 
 @Component({
@@ -11,17 +11,25 @@ import { OverlayEventDetail } from '@ionic/core/components';
 export class AlarmMenuComponent implements OnInit {
 
   @ViewChild(IonModal) modal: IonModal;
+  @ViewChild('modal2') modal2!: ModalController;
   @Input() current: string = "";
 
   message = 'Cancelado';
 
 
-  constructor(public router: Router) { }
+  constructor(public router: Router,
+    protected modalController: ModalController) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   cancel() {
     this.modal.dismiss(null, 'cancel');
+  }
+
+  close() {
+    console.log("close")
+    this.modalController.dismiss()
+
   }
 
   onWillDismiss(event: Event) {
